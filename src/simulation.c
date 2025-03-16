@@ -32,8 +32,7 @@ void simulate(const char* input_filename, const char* output_filename) {
             timeStep(&lights);
         }
     }
-
-    free(commands);
     saveToJSONFile(output_filename, stepStatuses, stepCount);
+    free(commands);
     deleteLights(&lights);
 }

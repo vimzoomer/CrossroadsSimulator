@@ -15,7 +15,7 @@ typedef struct {
     int length;
 } Queue;
 
-Queue* createQueue();
+Queue* createQueue(void);
 void enqueue(Queue* q, Vehicle* vehicle);
 Vehicle* dequeue(Queue* q);
 Vehicle * peek(Queue* q);

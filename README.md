@@ -112,6 +112,7 @@ traffic_lights_simulation/
 ## Kompilacja
 ### Wymagania
 - Kompilator C (np. GCC)
+- biblioteka cJSON
 - CMake
 
 ### Kroki

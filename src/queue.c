@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-Queue* createQueue() {
+Queue* createQueue(void) {
     Queue* q = (Queue*)malloc(sizeof(Queue));
     q->front = q->rear = NULL;
     q->length = 0;

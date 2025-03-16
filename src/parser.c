@@ -36,14 +36,14 @@ Command* parseJSONFromFile(const char* filename, int* commandCount) {
     long fileSize = ftell(file);
     rewind(file);
 
-    char* jsonString = (char*)malloc(fileSize + 1);
+    char* jsonString = (char*)malloc((unsigned long)fileSize + 1);
     if (!jsonString) {
         perror("Memory allocation failed");
         fclose(file);
         return NULL;
     }
 
-    fread(jsonString, 1, fileSize, file);
+    fread(jsonString, 1, (unsigned long)fileSize, file);
     jsonString[fileSize] = '\0';
 
     fclose(file);

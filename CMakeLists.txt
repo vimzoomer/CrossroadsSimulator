@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.24)
 project(crossroads C)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -Werror -Wshadow -Wuninitialized -Wconversion -Wnull-dereference -Wdouble-promotion")
+
 set(CMAKE_C_STANDARD 11)
 
 find_package(cJSON REQUIRED)

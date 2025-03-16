@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "lights.h"
 
-Lights createLights() {
+Lights createLights(void) {
     Lights lights;
     lights.NQueue = createQueue();
     lights.SQueue = createQueue();
@@ -77,8 +77,8 @@ int modulo(int a, int b) {
 }
 
 bool leftTurnConflict(Vehicle* vehicle1, Vehicle* vehicle2) {
-    if ((modulo((int)vehicle1->startRoad - 1, 4) == vehicle1->endRoad) &&
-       ((modulo((int)vehicle2->startRoad + 2, 4) == vehicle2->endRoad) ||
+    if ((modulo((int)vehicle1->startRoad - 1, 4) == (int)vehicle1->endRoad) &&
+       ((modulo((int)vehicle2->startRoad + 2, 4) == (int)vehicle2->endRoad) ||
        (vehicle1->endRoad == vehicle2->endRoad)))
         return true;
 

@@ -21,7 +21,7 @@ typedef struct {
 } VehiclePair;
 
 Vehicle createVehicle(const char* vehicleId, const char* startRoad, const char* endRoad);
-VehiclePair createVehiclePair();
+VehiclePair createVehiclePair(void);
 void addToVehiclePair(VehiclePair* vehiclePair, Vehicle* vehicle);
 Vehicle* vehiclePairGet(VehiclePair* vehiclePair, int index);
 

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lights.h"
 
-void testLightInitialization() {
+void testLightInitialization(void) {
     Lights lights = createLights();
     assert(lights.NSLight == GREEN);
     assert(lights.WELight == RED);
@@ -16,7 +16,7 @@ void testLightInitialization() {
     deleteLights(&lights);
 }
 
-void testLightSwitch() {
+void testLightSwitch(void) {
     Lights lights = createLights();
 
     switchState(&lights);
@@ -33,7 +33,7 @@ void testLightSwitch() {
     deleteLights(&lights);
 }
 
-void testVehicleMovement() {
+void testVehicleMovement(void) {
     Lights lights = createLights();
 
     Vehicle vehicle1 = createVehicle("v1", "north", "south");
@@ -52,7 +52,7 @@ void testVehicleMovement() {
     deleteLights(&lights);
 }
 
-void testLeftTurnConflict() {
+void testLeftTurnConflict(void) {
     Lights lights = createLights();
 
     Vehicle vehicle1 = createVehicle("v1", "south", "west");
@@ -70,7 +70,7 @@ void testLeftTurnConflict() {
 }
 
 
-void testGreenTimeAdjustment() {
+void testGreenTimeAdjustment(void) {
     Lights lights = createLights();
 
     Vehicle vehicle1 = createVehicle("v1", "north", "south");
@@ -85,7 +85,7 @@ void testGreenTimeAdjustment() {
     deleteLights(&lights);
 }
 
-int main() {
+int main(void) {
     testLightInitialization();
     testLightSwitch();
     testVehicleMovement();

@@ -20,7 +20,7 @@ typedef struct {
     int WEGreenTimeLeft;
 } Lights;
 
-Lights createLights();
+Lights createLights(void);
 void adjustLightTimes(Lights* lights);
 void switchState(Lights* lights);
 void getLeftVehicles(Lights* lights, VehiclePair* vehicles);

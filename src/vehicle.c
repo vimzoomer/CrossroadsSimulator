@@ -39,7 +39,7 @@ Vehicle createVehicle(const char* vehicleId, const char* startRoad, const char* 
     return newVehicle;
 }
 
-VehiclePair createVehiclePair() {
+VehiclePair createVehiclePair(void) {
     VehiclePair pair;
     pair.vehicle0 = pair.vehicle1 = NULL;
     pair.numVehicles = 0;
