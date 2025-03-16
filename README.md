@@ -100,6 +100,12 @@ traffic_lights_simulation/
 │   ├── parser.h
 │   ├── vehicle.h
 │   └── queue.h
+│
+├── tests/
+│   └── test_lights.c
+│
+├── example/
+│   └── input.json
 └── 
 ```
 
@@ -159,6 +165,11 @@ Po uruchomieniu symulacji, plik `output.json` zawiera listę samochodów, które
 make test
 ```
 
+## Przykład
+Symulację można uruchomić na przykładowych danych wykorzystując komendę:
+```bash
+make example
+```
 
 
 

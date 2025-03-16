@@ -35,3 +35,8 @@ add_test(NAME TestLightInitialization COMMAND run_tests --gtest_filter=testLight
 add_test(NAME TestVehicleMovement COMMAND run_tests --gtest_filter=testVehicleMovement())
 add_test(NAME TestLeftTurnConflict COMMAND run_tests --gtest_filter=testLeftTurnConflict())
 add_test(NAME TestGreenTimeAdjustment COMMAND run_tests --gtest_filter=testGreenTimeAdjustment())
+
+add_custom_target(example
+    COMMAND ${CMAKE_BINARY_DIR}/crossroads ${CMAKE_SOURCE_DIR}/example/input.json ${CMAKE_SOURCE_DIR}/example/output.json
+    DEPENDS crossroads
+)
