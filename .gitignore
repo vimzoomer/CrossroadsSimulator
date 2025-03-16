@@ -70,3 +70,7 @@ dkms.conf
 
 # Build directory
 build/
+
+# CLion
+cmake-build-debug/
+.idea/
